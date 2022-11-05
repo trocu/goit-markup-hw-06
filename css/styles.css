@@ -346,11 +346,11 @@ Footer section
 }
 .footer-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 .footer-address {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-right: 70px;
 }
 .footer-address p {
   margin: 0;
@@ -629,7 +629,7 @@ Footer social media icons
 .icon-footer-wrapper a:focus {
   background-color: var(--brand-color);
   fill: var(--white-item);
-  cursor: url("../images/icons.svg#icon-finger"), pointer;
+  cursor: pointer;
 }
 
 /* 
@@ -676,5 +676,233 @@ Modal styles
 .modal-button {
   all: unset;
   top: 30px;
+  cursor: pointer;
+}
+
+/* 
+===========
+Form styles
+===========
+*/
+
+/* 
+Agency footer form
+------------------
+*/
+.footer-form {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+.footer-form span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--white-item);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.footer-form input {
+  padding: 15px 0 15px 16px;
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  color: var(--white-item);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.form-signin {
+  position: relative;
+  display: inline;
+  margin-left: 12px;
+}
+.form-signin button {
+  color: var(--white-item);
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0 0 0 / 0.15);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 76px 10px 46px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.form-signin svg {
+  position: absolute;
+  top: -2px;
+  left: 148px;
+  fill: var(--white-item);
+}
+
+/* 
+Modal forms
+-----------
+*/
+
+.modal-form {
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+}
+.modal-form p:first-child {
+  display: block;
+  margin: 0;
+  color: var(--default-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Fieldset section */
+.order-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 9px 12px;
+  margin: 28px 0;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-box label {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--light-txt-color);
+}
+.order-box svg {
+  fill: var(--default-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--default-color);
+  padding-left: 10px;
+}
+
+/* Textarea section  */
+.order-comment {
+  padding: 0;
+  resize: none;
+  width: 100%;
+  height: 96px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--default-color);
+  border: none;
+  outline: none;
+}
+.order-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* Checkbox section  */
+.order-checkbox-wraper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+.order-checkbox-wraper input {
+  vertical-align: middle;
+  width: 16px;
+  height: 15px;
+  opacity: 0;
+}
+
+/* Change the form border to brand color when focused */
+.order-box:focus-within {
+  border: 1px solid var(--brand-color);
+}
+.order-box:focus-within svg {
+  fill: var(--brand-color);
+}
+
+/* Style for custom checkbox  */
+.order-checkbox-custom {
+  position: absolute;
+  top: 2px;
+  left: 16px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--default-color);
+  background-color: var(--white-item);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sets the position for the checkmark svg */
+.order-checkmark {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  fill: var(--white-item);
+}
+
+/* Add brand-color background to the checkbox when checked  */
+.checkbox-label input:checked + .order-checkbox-custom {
+  background-color: var(--brand-color);
+  border: 2px solid var(--brand-color);
+}
+
+/* Add brand-color border to the checkbox when focused  */
+.checkbox-label input:focus + .order-checkbox-custom {
+  border-color: var(--brand-color);
+}
+
+/* Style for the statement section  */
+.order-checkbox-wraper a {
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+}
+.order-checkbox-wraper p {
+  display: inline;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: var(--light-txt-color);
+  margin: 0;
+}
+
+.order-send-btn button {
+  display: block;
+  margin: 0 auto;
+  color: var(--white-item);
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0 0 0 / 0.15);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 76px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   cursor: pointer;
 }
