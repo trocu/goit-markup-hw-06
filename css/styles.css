@@ -854,6 +854,7 @@ Modal forms
   border-radius: 4px;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color;
 }
 
 /* Sets the position for the checkmark svg */
@@ -865,14 +866,16 @@ Modal forms
 }
 
 /* Add brand-color background to the checkbox when checked  */
-.checkbox-label input:checked + .order-checkbox-custom {
+.order-checkbox:checked + .order-checkbox-custom {
   background-color: var(--brand-color);
   border: 2px solid var(--brand-color);
 }
 
 /* Add brand-color border to the checkbox when focused  */
-.checkbox-label input:focus + .order-checkbox-custom {
+.order-checkbox:focus + .order-checkbox-custom {
   border-color: var(--brand-color);
+  outline: 2px solid rgba(33 150 243 / 0.25);
+  outline-offset: 1px;
 }
 
 /* Style for the statement section  */
@@ -900,6 +903,7 @@ Modal forms
   border: none;
   border-radius: 4px;
   padding: 10px 76px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
