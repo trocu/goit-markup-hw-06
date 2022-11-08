@@ -75,6 +75,10 @@ Logo & nav section
   margin-right: 50px;
 }
 .link-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  vertical-align: middle;
   text-decoration: none;
   color: var(--light-txt-color);
   font-weight: 500;
@@ -118,7 +122,7 @@ Adds Agency & Portfolio links permanent underline
 .link-nav-agency::after {
   content: "";
   position: absolute;
-  width: 101%;
+  width: 100%;
   opacity: 1;
   height: 4px;
   left: -2px;
@@ -135,7 +139,7 @@ Adds Agency & Portfolio links permanent underline
 .link-nav-portfolio::after {
   content: "";
   position: absolute;
-  width: 101%;
+  width: 100%;
   opacity: 1;
   height: 4px;
   left: -2px;
@@ -760,41 +764,47 @@ Modal forms
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
 
-/* Fieldset section */
-.order-box {
-  display: flex;
+/* Input style section */
+.order-label {
+  display: block;
   position: relative;
-  align-items: center;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 9px 12px;
-  margin: 28px 0;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.order-box label {
-  position: absolute;
-  top: -16px;
-  left: 0;
+.order-label span {
+  display: block;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--light-txt-color);
+  margin-bottom: 4px;
 }
-.order-box svg {
-  fill: var(--default-color);
+.order-label svg {
+  position: absolute;
+  top: 28px;
+  left: 14px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.order-box input {
+.order-label input {
   width: 100%;
-  border: none;
-  outline: none;
+  height: 40px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--default-color);
-  padding-left: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 12px 12px 40px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-label input:focus {
+  border: 1px solid var(--brand-color);
+}
+.order-label:focus-within svg {
+  fill: var(--brand-color);
 }
 
 /* Textarea section  */
@@ -802,20 +812,26 @@ Modal forms
   padding: 0;
   resize: none;
   width: 100%;
-  height: 96px;
+  height: 120px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--default-color);
-  border: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
   outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-comment::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.order-comment:focus {
+  border: 1px solid var(--brand-color);
 }
 
 /* Checkbox section  */
@@ -825,6 +841,7 @@ Modal forms
   justify-content: center;
   align-items: baseline;
   gap: 5px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 .order-checkbox-wraper input {
@@ -885,13 +902,11 @@ Modal forms
   letter-spacing: 0.03em;
   color: var(--brand-color);
 }
-.order-checkbox-wraper p {
-  display: inline;
+.order-checkbox-wraper span {
   font-size: 14px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
   color: var(--light-txt-color);
-  margin: 0;
 }
 
 .order-send-btn button {

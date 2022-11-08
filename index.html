@@ -579,68 +579,68 @@
           <form>
             <p>Zostaw swoje dane w formularzu poniżej</p>
 
-            <!-- Fieldset name START  -->
-            <fieldset class="order-box">
-              <label for="name">Imię</label>
-              <svg
-                width="18"
-                height="18"
-              >
-                <use href="./images/icons.svg#icon-person"></use>
-              </svg>
+            <!-- Input name START  -->
+            <label class="order-label">
+              <span>Imię</span>
+              <span>
+                <svg
+                  class="order-icon"
+                  width="18"
+                  height="18"
+                >
+                  <use href="./images/icons.svg#icon-person"></use></svg
+              ></span>
               <input
                 type="text"
                 name="name"
-                id="name"
               />
-            </fieldset>
-            <!-- Fieldset name END -->
-
-            <!-- Fieldset phone START  -->
-            <fieldset class="order-box">
-              <label for="phone">Telefon</label>
-              <svg
-                width="18"
-                height="18"
-              >
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
+            </label>
+            <!-- Input name END -->
+            <!-- Input phone START  -->
+            <label class="order-label">
+              <span>Telefon</span>
+              <span>
+                <svg
+                  class="order-icon"
+                  width="18"
+                  height="18"
+                >
+                  <use href="./images/icons.svg#icon-phone"></use></svg
+              ></span>
               <input
                 type="tel"
                 name="phone"
-                id="phone"
               />
-            </fieldset>
-            <!-- Fieldset phone END -->
-
-            <!-- Fieldset email START  -->
-            <fieldset class="order-box">
-              <label for="email">Email</label>
-              <svg
-                width="18"
-                height="18"
-              >
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
+            </label>
+            <!-- Input phone END -->
+            <!-- Input email START  -->
+            <label class="order-label">
+              <span>Email</span>
+              <span>
+                <svg
+                  class="order-icon"
+                  width="18"
+                  height="18"
+                >
+                  <use href="./images/icons.svg#icon-email"></use></svg
+              ></span>
               <input
                 type="email"
                 name="email"
-                id="email"
               />
-            </fieldset>
-            <!-- Fieldset email END -->
+            </label>
+            <!-- Input email END -->
 
-            <!-- Fieldset comment START  -->
-            <fieldset class="order-box">
-              <label for="comment">Komentarz</label>
+            <!-- Textarea comment START  -->
+            <label class="order-label">
+              <span>Komentarz</span>
               <textarea
                 class="order-comment"
                 name="comment"
-                id="comment"
                 placeholder="Wprowadź tekst"
               ></textarea>
-            </fieldset>
-            <!-- Fieldset comment END -->
+            </label>
+            <!-- Textarea comment END -->
 
             <!-- Statement checkbox START -->
             <div class="order-checkbox-wraper">
@@ -659,11 +659,11 @@
                   >
                     <use href="./images/icons.svg#icon-check"></use></svg
                 ></span>
+                <span
+                  >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                  <a href="#">Politykę Prywatności.</a></span
+                >
               </label>
-              <p>
-                Oświadczam iż akceptuję <a href="#">Regulamin</a> i
-                <a href="#">Politykę Prywatności.</a>
-              </p>
             </div>
             <!-- Statement checkbox END -->
 
